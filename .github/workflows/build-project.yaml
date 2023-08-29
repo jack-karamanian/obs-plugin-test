@@ -50,6 +50,7 @@ jobs:
               ;;
             *) ;;
           esac
+          config_data=('codesign:false' 'notarize:false' 'package:true' 'config:RelWithDebInfo')
 
           for config in "${config_data[@]}"; do
             IFS=':' read -r key value <<< "${config}"
